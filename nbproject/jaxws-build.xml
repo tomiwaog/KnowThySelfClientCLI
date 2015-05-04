@@ -16,22 +16,22 @@
             <classpath path="${libs.jaxws21.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-client-KTS-Service-Server" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/KTS-Service-Server"/>
-        <property name="wsdl-KTS-Service-Server" location="xml-resources/web-service-references/KTS-Service-Server/wsdl/localhost_15719/KnowThySelf/KTS-Service-Server.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KTS-Service-Server" destdir="${build.generated.dir}/jax-wsCache/KTS-Service-Server" wsdl="${wsdl-KTS-Service-Server}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:15719/KnowThySelf/KTS-Service-Server?wsdl" xnocompile="true" xendorsed="true" package="knowthyselfclient">
-            <depends file="${wsdl-KTS-Service-Server}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/KTS-Service-Server"/>
+    <target name="wsimport-client-KnowThySelfWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService"/>
+        <property name="wsdl-KnowThySelfWebService" location="xml-resources/web-service-references/KnowThySelfWebService/wsdl/localhost_15719/KnowThySelfWebService/KnowThySelfWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService" destdir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService" wsdl="${wsdl-KnowThySelfWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:15719/KnowThySelfWebService/KnowThySelfWebService?wsdl" xnocompile="true" xendorsed="true" package="knowthyselfclient">
+            <depends file="${wsdl-KnowThySelfWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/KTS-Service-Server">
+            <fileset dir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-KTS-Service-Server" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/KTS-Service-Server"/>
+    <target name="wsimport-client-clean-KnowThySelfWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/KnowThySelfWebService"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/knowthyselfclient"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-KTS-Service-Server"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-KnowThySelfWebService"/>
 </project>

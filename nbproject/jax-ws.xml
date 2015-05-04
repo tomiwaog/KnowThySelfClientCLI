@@ -2,9 +2,9 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="KTS-Service-Server">
-      <wsdl-url>http://localhost:15719/KnowThySelf/KTS-Service-Server?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_15719/KnowThySelf/KTS-Service-Server.wsdl</local-wsdl-file>
+    <client name="KnowThySelfWebService">
+      <wsdl-url>http://localhost:15719/KnowThySelfWebService/KnowThySelfWebService?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_15719/KnowThySelfWebService/KnowThySelfWebService.wsdl</local-wsdl-file>
       <package-name forceReplace="true">knowthyselfclient</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -22,7 +22,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:15719/KnowThySelf/KTS-Service-Server?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:15719/KnowThySelfWebService/KnowThySelfWebService?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

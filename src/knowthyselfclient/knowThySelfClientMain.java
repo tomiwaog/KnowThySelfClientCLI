@@ -1,26 +1,20 @@
 package knowthyselfclient;
-
 public class knowThySelfClientMain {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String starsign = "";
+        String zodiac = "";
         System.out.println("APP LAUNCHING...BEGIN ");
         // TODO code application logic here
         String getName = Console.askString("\nPlease enter Your Full Name: ");
-
-
         String inDd = Console.askString("\nPlease enter DAY of birth: ");
 
         Console.askString("\nPlease enter Your Favourite Food: ");
         Console.askString("\nOK " + getName + ", What is you Favourite Color?: ");
         String inMm = Console.askString("\nPlease enter MONTH of birth: ");
         Console.askString("\nAnd LASTLY, Enter Your Favourite beverage: ");
-
-        System.out.println(welcomeUser(getName));
-        System.out.println("Born on "+ getDayOfBirth(inDd) + " of " + getMonthOfBirth(inMm));
+   
         // FOR MONTH JANUARY
         if (inMm.toLowerCase().contains("jan")) {
             if (inDd.toLowerCase().contains("20")
@@ -35,9 +29,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "aquarius";
+                zodiac = "aquarius";
             } else {
-                starsign = "capricorn";
+                zodiac = "capricorn";
             }
         } // FOR MONTH FEBRUARY
         else if (inMm.toLowerCase().contains("feb")) {
@@ -55,9 +49,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "pisces";
+                zodiac = "pisces";
             } else {
-                starsign = "aquarius";
+                zodiac = "aquarius";
             }
         } // FOR MONTH MARCH
         else if (inMm.toLowerCase().contains("mar")) {
@@ -73,9 +67,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "aries";
+                zodiac = "aries";
             } else {
-                starsign = "pisces";
+                zodiac = "pisces";
             }
         } // FOR MONTH APRIL
         else if (inMm.toLowerCase().contains("apr")) {
@@ -91,9 +85,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "taurus";
+                zodiac = "taurus";
             } else {
-                starsign = "aries";
+                zodiac = "aries";
             }
         } // FOR MONTH MAY
         else if (inMm.toLowerCase().contains("may")) {
@@ -109,9 +103,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "gemini";
+                zodiac = "gemini";
             } else {
-                starsign = "taurus";
+                zodiac = "taurus";
             }
         } // FOR MONTH JUNE
         else if (inMm.toLowerCase().contains("jun")) {
@@ -126,9 +120,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "cancer";
+                zodiac = "cancer";
             } else {
-                starsign = "gemini";
+                zodiac = "gemini";
             }
         } // FOR MONTH JULY
         else if (inDd.toLowerCase().contains("jul")) {
@@ -142,9 +136,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "leo";
+                zodiac = "leo";
             } else {
-                starsign = "cancer";
+                zodiac = "cancer";
             }
         } // FOR MONTH AUGUST
         else if (inMm.toLowerCase().contains("aug")) {
@@ -157,9 +151,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "virgo";
+                zodiac = "virgo";
             } else {
-                starsign = "leo";
+                zodiac = "leo";
             }
         } // FOR MONTH SEPTEMBER
         else if (inMm.toLowerCase().contains("sep")) {
@@ -173,9 +167,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "libra";
+                zodiac = "libra";
             } else {
-                starsign = "virgo";
+                zodiac = "virgo";
             }
         } // FOR MONTH OCTOBER
         else if (inMm.toLowerCase().contains("oct")) {
@@ -188,9 +182,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "scorpio";
+                zodiac = "scorpio";
             } else {
-                starsign = "libra";
+                zodiac = "libra";
             }
         } // FOR MONTH NOVEMBER
         else if (inMm.toLowerCase().contains("nov")) {
@@ -204,9 +198,9 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "sagittarius";
+                zodiac = "sagittarius";
             } else {
-                starsign = "scorpio";
+                zodiac = "scorpio";
             }
         } // FOR MONTH DECEMBER
         else if (inMm.toLowerCase().contains("dec")) {
@@ -220,80 +214,84 @@ public class knowThySelfClientMain {
                     || inDd.toLowerCase().contains("29")
                     || inDd.toLowerCase().contains("30")
                     || inDd.toLowerCase().contains("31")) {
-                starsign = "capricon";
+                zodiac = "capricon";
             } else {
-                starsign = "saggittarius";
+                zodiac = "saggittarius";
             }
         } else {
             System.out
                     .println("You haven't entered a valid star sign... Please try again");
-        }
-
-        if (starsign == "gemini") {
-            System.out.println("SUMMARY\nYou are intelligent, a thinker , communicative, humorous,"
-                    + " multiskilled, indecisive, mutable, Adaptable, restless, witty and devious");
-        }
-
-        if (starsign == "leo") {
-            System.out.println("SUMMARY\nYou are confident, melodramatic, generous, loyal, stubborn,"
-                    + " vain, pretentious, family-oriented or prone to family issues");
-        }
-        if (starsign == "capricorn") {
-            System.out.println("SUMMARY\nYou are stubborn, resourceful, hardworking, ambitous, dictorial,"
-                    + " conceited, emotional, distrusting, responsible");
-        }
-        if (starsign == "pisces") {
-            System.out.println("SUMMARY\nYou are emotional, compassionate, devoted, lazy, imaginative,"
-                    + " oversensitive, self-pitying, and an escapist");
-        }
-        if (starsign == "aquarius") {
-            System.out.println("SUMMARY\nYou are witty, communicative, original, intelligent, aloof and unemotional");
-        }
-        if (starsign == "aries") {
-            System.out.println("SUMMARY\nYou are Independent, generous, moody, short-tempered, optimistic, self-involved and impatient");
-        }
-        if (starsign == "taurus") {
-            System.out.println("SUMMARY\nYou are stubborn, honest, materialistic, lazy and self indulging");
-        }
-        if (starsign == "cancer") {
-            System.out.println("SUMMARY\nYou are moody, homely, fmaily-oriented and (or) family issues or daddy issues,"
-                    + " over-sensitive, insecure, caring, responsive and dependable");
-        }
-        if (starsign == "virgo") {
-            System.out.println("SUMMARY\nYou are analytical, observant, fussy, precise, cold, interferromg"
-                    + ", inflexible, direct, helpful, reliable, not fun");
-        }
-        if (starsign == "libra") {
-            System.out.println("SUMMARY\nYou are Diplomatic, hospitable, colourful, Vain, indecisive, fair, social, intelligent and people pleaser");
-        }
-        if (starsign == "scorpio") {
-            System.out.println("SUMMARY\nYou are resourceful, passionate, loyal, evil, stubborn, determined"
-                    + "obsessive, jealous, intuitive, violent, aggressive, manipulative, ride or die person");
-        }
-        if (starsign == "sagittarius") {
-            System.out.println("SUMMARY\nYou are exciting, independent, unemotional, adventurous, mutable, philosophical, "
-                    + "stubborn and argumentative");
-        }
+        }  
+        
+        //Receives name info from Server.
+        System.out.println(welcomeUser(getName));
+        //Rtrieves age details from server
+        System.out.println("Born on "+ getDayOfBirth(inDd) + " of " + getMonthOfBirth(inMm));
+        //Gets User Summary from Server
+        System.out.println(findZodiac(zodiac));
 
     }
 
-    private static String welcomeUser(java.lang.String user) {
-        knowthyselfclient.KTSServiceServer_Service service = new knowthyselfclient.KTSServiceServer_Service();
-        knowthyselfclient.KTSServiceServer port = service.getAppWebPort();
-        return port.welcomeUser(user);
+    private static String findZodiac(java.lang.String typeZodiacc) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.findZodiac(typeZodiacc);
+    }
+
+    private static String getDateOfBirth(java.lang.String dd, java.lang.String mm, int yyyy) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.getDateOfBirth(dd, mm, yyyy);
     }
 
     private static String getDayOfBirth(java.lang.String dd) {
-        knowthyselfclient.KTSServiceServer_Service service = new knowthyselfclient.KTSServiceServer_Service();
-        knowthyselfclient.KTSServiceServer port = service.getAppWebPort();
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
         return port.getDayOfBirth(dd);
     }
 
+    private static String getFaveColor(java.lang.String color) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.getFaveColor(color);
+    }
+
+    private static String getFaveDrink(java.lang.String drink) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.getFaveDrink(drink);
+    }
+
+    private static String getFaveFood(java.lang.String food) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.getFaveFood(food);
+    }
+
     private static String getMonthOfBirth(java.lang.String monthdob) {
-        knowthyselfclient.KTSServiceServer_Service service = new knowthyselfclient.KTSServiceServer_Service();
-        knowthyselfclient.KTSServiceServer port = service.getAppWebPort();
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
         return port.getMonthOfBirth(monthdob);
     }
-    
 
+    private static String getZodiacSign(java.lang.String zodiac) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.getZodiacSign(zodiac);
+    }
+
+    private static String welcomeUser(java.lang.String user) {
+        knowthyselfclient.KnowThySelfWebService_Service service = new knowthyselfclient.KnowThySelfWebService_Service();
+        knowthyselfclient.KnowThySelfWebService port = service.getAppWebPort();
+        return port.welcomeUser(user);
+    }
+
+
+
+
+
+
+
+
+    
 }
